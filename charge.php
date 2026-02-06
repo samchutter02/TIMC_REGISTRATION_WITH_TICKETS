@@ -11,7 +11,7 @@ if (empty($_SESSION['cart']) || empty($_SESSION['form_data'])) {
     $is_success = false;
 } else {
     require 'vendor/autoload.php';
-    \Stripe\Stripe::setApiKey('sk_test_h4tVlJzffFYOhkmJQxGf8sgx'); // ← use your real key in production
+    \Stripe\Stripe::setApiKey('you-thought-LOL');
 
     $token = $_POST['stripeToken'] ?? null;
     $total_cost = (float) ($_SESSION['cart']['total_cost'] ?? 0);
@@ -465,4 +465,5 @@ if (!empty($form_data['performers']) && is_array($form_data['performers'])) {
 </div>
 
 </body>
+
 </html>
